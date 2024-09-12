@@ -8,8 +8,17 @@ $(document).ready(function () {
 
                 const newItem = document.createElement('div');
                 newItem.classList.add('recipe');
+                
+                // 12 sep 2024 09:15
+                //  Geen reset na zoeken recepten #1 
                 newItem.innerHTML = `<h3>${recipe.title}</h3><a href="ingredients.html?id=${recipe.id}"><img src=${recipe.image} /></a>`;
+                newItem.classList = "card";
+                document.querySelectorAll('.card').forEach((elem) => {
+                    elem.remove();
+                });
                 searchResults.appendChild(newItem);
+                
+
             });
         });
     });
